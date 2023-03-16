@@ -10,7 +10,7 @@
 .child{
     width: 10px;
     height: 10px;
-    border:solid 1px #ccc;
+    border:solid 1px #E4DCCF;
     font-size: 20px;
     overflow: hidden;
     line-height: 0px;
@@ -23,4 +23,27 @@
 } 
 .child:hover{
     background: #ccc;
+}
+.panelControls{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 300px;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EA5455;
+    color:#F9F5EB;
+    border:#EA5455 solid 1px;
+    width: 70px;
+    height: 25px;
+    cursor: pointer;
+    transition: .7s;
+    border-radius: 15px;
+}
+.btn:hover{
+    color: #EA5455;
+    background:#F9F5EB;
 }
