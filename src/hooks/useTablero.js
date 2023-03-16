@@ -3,6 +3,21 @@ import { useState } from 'react';
 const useTablero = () => {
     const [tablero, setTablero] = useState([])
     const [load, setLoad] = useState(true)
+    const [edge, setEdge] = useState(10)
+
+    const handleEdge = (e) =>{
+        if(e.target.value > 10){
+            setEdge(e.target.value)
+        }else{
+            setEdge(10)
+        }
+    
+    }
+
+    const reset = () =>{
+        setLoad(true)
+        setTablero([])
+    }
 
     const createGrid = (num) => {
         let tabla = []
@@ -19,6 +34,7 @@ const useTablero = () => {
         setTablero(tabla2)
         setLoad(false)
     }
+
     const changeLife = (id) => {
         setTablero(tablero => {
             const stateAux = [...tablero];
@@ -84,8 +100,8 @@ const useTablero = () => {
             }, 100);
         }
     }
-    
-    return { tablero, load, createGrid, changeLife, play }
+
+    return { tablero, load, createGrid, changeLife, play, edge, handleEdge, reset }
 }
 
 export default useTablero;

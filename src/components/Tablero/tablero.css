@@ -1,6 +1,7 @@
 body{
     background: #fff;
 }
+
 .tablero{
     display: flex;
     flex-direction: column;
@@ -42,8 +43,40 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 500px;
+    min-height: 100px;
     padding: 20px 0px;
+}
+.containerEdge{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.containerEdge input{
+    margin-top: 10px;
+    border: 0px;
+    border-radius: 15px;
+    outline: none;
+    padding: 10px 20px;
+}
+.btnReset{
+    position: absolute;
+    background: #002B5B;
+    height: 50px;
+    width: 50px;
+    font-size: 12px;
+    color:#fff;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 4px #ececec;
+    right: 50px;
+    bottom: 50px;
+    cursor: pointer;
+}
+.btnReset:hover{
+    background: #EA5455;
 }
 .btn{
     display: flex;
@@ -63,4 +96,27 @@ body{
 .btn:hover{
     color: #EA5455;
     background:#F9F5EB;
+}
+
+@media only screen and (max-width:768px){
+    .panelControls{
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        order: 2;
+        height:25vh;
+    }
+    .child{
+        width: 15px;
+        height: 15px;
+    }
+    p, ol{
+        padding:40px ;
+    }
+    .btnReset{
+        top: 20px;
+    }
+    .conntentTablero{
+        min-height: 70vh;
+    }
 }
