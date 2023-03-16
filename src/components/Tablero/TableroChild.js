@@ -1,15 +1,20 @@
 import React from 'react'
 import './tablero.css'
 
-const TableroChild = ({data =[]}) => {
+const TableroChild = ({data =[], action}) => {
+
   return (
     <div className='row'>
         {data.map((ele)=>{ 
-            return <div key={ele[0].id} className='child'>{ele[0].id}0</div> 
+            return (
+                <div key={ele[0].id} className='child' onClick={()=>action(ele[0].id)}>
+                    {ele[0].poblacion}
+                </div> 
+                )
         })
         }
     </div>
-  )
-}
+  ) 
+} 
 
-export default TableroChild
+export default TableroChild 
