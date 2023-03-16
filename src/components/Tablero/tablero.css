@@ -1,3 +1,6 @@
+body{
+    background: #fff;
+}
 .tablero{
     display: flex;
     flex-direction: column;
@@ -14,7 +17,7 @@
     font-size: 20px;
     overflow: hidden;
     line-height: 0px;
-    color: #121212;
+    color: #002B5B;
     transition: .7s;
     cursor: pointer;
     display: flex;
@@ -28,7 +31,19 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    max-width: 300px;
+    width: 100%;
+    padding: 20px 0px;
+    background-color: #F9F5EB;
+    box-shadow: 0px 4px 6px #ececec;
+}
+.conntentTablero{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    padding: 20px 0px;
 }
 .btn{
     display: flex;
@@ -42,6 +57,8 @@
     cursor: pointer;
     transition: .7s;
     border-radius: 15px;
+    font-size: 12px;
+    text-transform: capitalize;
 }
 .btn:hover{
     color: #EA5455;
