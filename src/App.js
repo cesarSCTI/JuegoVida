@@ -1,5 +1,4 @@
 import TableroContainer from './components/Tablero/TableroContainer';
-import './App.css';
 
 
 function App() {
